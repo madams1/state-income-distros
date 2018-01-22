@@ -105,10 +105,8 @@ animate_state_incomes <- function(s, font = "Avenir") {
       plot.subtitle = element_text(face = "bold", size = 30, hjust = 0)
     )
   
-  # create a directory for this state and save an html file w/ the animation in it
+  # create a gif for this state
   formatted_state_name <- tolower(s) %>% stringr::str_replace_all(" ", "_")
-  output_dir <- "~/Documents/miscellanea/makeover_monday/2018-01-15_state_income_distributions/"
-  dir.create(paste0(output_dir, formatted_state_name))
   
   gganimate(
     p,
